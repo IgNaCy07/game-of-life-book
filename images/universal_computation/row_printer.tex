@@ -34,21 +34,21 @@
 			\path[draw,gridgray,line width=0.45pt] (\smrx,\smby) -- (\bgrx,\bgby);
 			
 			\newcommand\thskp{0.078}
-			\draw[gray] (\bglx+1.12,\bgty-1.05) node[anchor=north west] {\footnotesize \texttt{CURSOR}};
-			\draw[gren,opacity=0.5] (\bglx+2.35,\bgty-0.95) node[anchor=north west] {\footnotesize \texttt{PRINT}};
-			\draw[dred,opacity=0.5] (\bglx+2.6,\bgty-3.07) node[anchor=north west] {\footnotesize \texttt{PUSH}};
+			\draw[gray] (\bglx+1.12,\bgty-1.05) node[anchor=north west] {\footnotesize \texttt{KURSOR}};
+			\draw[gren,opacity=0.5] (\bglx+2.35,\bgty-0.95) node[anchor=north west] {\footnotesize \texttt{DRUKUJ}};
+			\draw[dred,opacity=0.5] (\bglx+2.6,\bgty-3.07) node[anchor=north west] {\footnotesize \texttt{POPCHNIJ}};
 		% END ZOOM BOX
 		
 		% PRINT PIXEL, THEN PUSH CURSOR
 		\newcommand\ppx{0.45}
 		\newcommand\ppy{6.46}
-		\draw[gray] (\ppx+0.35,\ppy-0.15) node[rotate=45,align=left] {\tiny\texttt{PRINT PIXEL,}\\[-0.2cm]\tiny\texttt{THEN PUSH CURSOR}};
+		\draw[gray] (\ppx+0.35,\ppy-0.15) node[rotate=45,align=left] {\tiny\texttt{WYDRUKUJ PIKSEL,}\\[-0.2cm]\tiny\texttt{POTEM POPCHNIJ KURSOR}};
 		\draw[color=gray,-stealth] (\ppx-0.38,\ppy-0.53) -- (\ppx+0.6,\ppy+0.45);
 		
 		% JUST PUSH CURSOR
 		\newcommand\jmx{1.45}
 		\newcommand\jmy{4.8}
-		\draw[gray] (\jmx+0.15,\jmy-0.15) node[rotate=45,align=left] {\tiny\texttt{JUST PUSH CURSOR}};
+		\draw[gray] (\jmx+0.15,\jmy-0.15) node[rotate=45,align=left] {\tiny\texttt{TYLKO POPCHNIJ}};
 		\draw[color=gray,-stealth] (\jmx-0.54,\jmy-0.69) -- (\jmx+0.75,\jmy+0.6);
 	\end{tikzpicture}
 \end{document}
