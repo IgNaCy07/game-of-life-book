@@ -49,11 +49,11 @@
 	\begin{tikzpicture}%
 		% DASHED GROUPINGS
 		\filldraw[draw=darkgray,fill=gray!10,dashed] (0.9,0.2) -- (2.1,0.2) -- (2.1,0.8) -- (-0.2,3.1) -- (-0.8,3.1) -- (-0.8,1.9) -- (-0.2,1.9) -- (0.9,0.8) -- cycle;
-		\draw[darkgray] (0.68,1.63) node[rotate=-45] {\scriptsize period~$2p = 240$};
+		\draw[darkgray] (0.68,1.63) node[rotate=-45] {\scriptsize okres~$2p = 240$};
 		\filldraw[draw=darkgray,fill=gray!10,dashed] (2.3,0.2) -- (3.5,0.2) -- (3.5,0.8) -- (-0.2,4.5) -- (-0.8,4.5) -- (-0.8,3.3) -- (-0.2,3.3) -- (2.3,0.8) -- cycle;
-		\draw[darkgray] (1.38,2.33) node[rotate=-45] {\scriptsize period~$3p = 360$};
+		\draw[darkgray] (1.38,2.33) node[rotate=-45] {\scriptsize okres~$3p = 360$};
 		\filldraw[draw=darkgray,fill=gray!10,dashed] (3.7,0.2) -- (4.9,0.2) -- (4.9,0.8) -- (-0.2,5.9) -- (-0.8,5.9) -- (-0.8,4.7) -- (-0.2,4.7) -- (3.7,0.8) -- cycle;
-		\draw[darkgray] (2.08,3.03) node[rotate=-45] {\scriptsize period~$4p = 480$};
+		\draw[darkgray] (2.08,3.03) node[rotate=-45] {\scriptsize okres~$4p = 480$};
 		\draw[darkgray] (2.78,3.73) node[rotate=45] {$\cdots$};
 			
 		% UP-DOWN GUNS
@@ -77,11 +77,11 @@
 		
 		% LWSS RAKE
 		\filldraw[color=black,fill=gray!50] (8,-1.2) -- (10.5,-1.2) -- (10.5,-2) -- (8,-2) -- cycle;
-		\draw[darkgray] (9.25,-2.13+0.5) node {\scriptsize period~$p=120$};
+		\draw[darkgray] (9.25,-2.13+0.5) node {\scriptsize okres~$p=120$};
 		\draw[thick,color=darkgray,-stealth] (10.5,-1.6) -- (11.5,-1.6);
 		
 		\draw[darkgray,decorate,decoration={brace,amplitude=4pt},xshift=1pt]
-		(11.5,-1.2) --node [anchor=north,xshift=26pt,yshift=6.5pt]{\footnotesize LWSS rake} (11.5,-2);
+		(11.5,-1.2) --node [anchor=north,xshift=26pt,yshift=6.5pt]{\footnotesize grzebień LWSS} (11.5,-2);
 		
 		% LWSS from GUN
 		\draw[ultra thick,color=darkgray,-stealth] (7.5,-1.6) -- (-1.8,-1.6);
@@ -90,11 +90,11 @@
 		% RAKES to MAKE LEFT-RIGHT row of GGGs
 		\gggrake{(-1,0)}{0}{1};
 		\draw[darkgray,decorate,decoration={brace,amplitude=10pt},xshift=1pt]
-		(10,1.9) --node [anchor=north,xshift=23pt,yshift=7pt]{\footnotesize rakes} (10,-0.9);
+		(10,1.9) --node [anchor=north,xshift=23pt,yshift=7pt]{\footnotesize grzebienie} (10,-0.9);
 		
 		% RAKES to MAKE UP-DOWN row of GGGs
 		\gggrake{(0,-1.6)}{90}{0.5};
 		\draw[darkgray,decorate,decoration={brace,amplitude=7pt},xshift=1pt]
-		(0.9,8.9) --node [anchor=north,xshift=23pt,yshift=7pt]{\footnotesize rakes} (0.9,7.4);
+		(0.9,8.9) --node [anchor=north,xshift=23pt,yshift=7pt]{\footnotesize grzebienie} (0.9,7.4);
 	\end{tikzpicture}
 \end{document}
