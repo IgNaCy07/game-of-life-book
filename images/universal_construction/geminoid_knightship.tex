@@ -12,17 +12,17 @@
 		% DIRECTION
 		\newcommand\dirx{9.5}
 		\newcommand\diry{12}
-		\draw[gray] (\dirx,\diry) node[rotate=-63.43,shift={(0.05,0.12)}] {\tiny \texttt{direction of travel}};
+		\draw[gray] (\dirx,\diry) node[rotate=-63.43,shift={(0.05,0.12)}] {\tiny \texttt{kierunek lotu}};
 		\draw[color=gray,-stealth] (\dirx+0.5,\diry-1) -- (\dirx-0.5,\diry+1);
 		
 		% NORTHEAST ELBOW
 		\draw[color=gray,decorate,decoration={brace,amplitude=10pt}]
-		(10.8,4.9) -- (8.8,2.9) node[midway,rotate=45,shift={(0.85,-0.55)}] {\tiny \texttt{northeast construction}};
-		\draw[color=gray] (10.8,4.9) node[rotate=45,shift={(-0.6,-0.8)}] {\tiny \texttt{elbow: n = 2048}};
+		(10.8,4.9) -- (8.8,2.9) node[midway,rotate=45,shift={(0.85,-0.55)}] {\tiny \texttt{północnowschodni łokieć}};
+		\draw[color=gray] (10.8,4.9) node[rotate=45,shift={(-0.6,-0.8)}] {\tiny \texttt{konstrukcyjny: n = 2048}};
 		
 		% NORTHWEST ELBOW
 		\draw[color=gray,decorate,decoration={brace,amplitude=10pt}]
-		(6.1,2.85) -- (0.2,8.75) node[midway,rotate=-45,shift={(0.03,-0.55)}] {\tiny \texttt{northwest construction elbow: m = 6144}};
+		(6.1,2.85) -- (0.2,8.75) node[midway,rotate=-45,shift={(0.03,-0.55)}] {\tiny \texttt{północnozachodni łokieć konstrukcyjny: m = 6144}};
 		
 		% CIRCLE THE SLIDING BLOCKS
 		\draw[white,line width=1.5pt,opacity=0.6](0.24,8.87) circle (0.1);
