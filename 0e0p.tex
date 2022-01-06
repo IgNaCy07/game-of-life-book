@@ -51,7 +51,7 @@ In this chapter, we first explore a few other cellular automata that have exotic
 \section{Other 2D Cellular Automata}\label{sec:other_ca_rules}\index{cellular automaton}
 %%%%%%%%%%%%%%%%%%%%%%%%
 
-While cellular automata (CA)\index{CA|see {cellular automaton}} can act on grids of any dimension and of a variety of different shapes, all of the ones that we consider (and all of the ones that can be emulated by the 0E0P metacell) act on a 2-dimensional square grid. Furthermore, in this section we only consider cellular automata that use two states, which we still refer to as ``alive'' and ``dead'', and the Moore neighborhood of Figure~\ref{fig:neighborhood}, though we will see in Section~\ref{sec:0e0p_rule_emulation} that the 0E0P metacell can emulate some cellular automata without these two restrictions.
+While cellular automata (CA) can act on grids of any dimension and of a variety of different shapes, all of the ones that we consider (and all of the ones that can be emulated by the 0E0P metacell) act on a 2-dimensional square grid. Furthermore, in this section we only consider cellular automata that use two states, which we still refer to as ``alive'' and ``dead'', and the Moore neighborhood of Figure~\ref{fig:neighborhood}, though we will see in Section~\ref{sec:0e0p_rule_emulation} that the 0E0P metacell can emulate some cellular automata without these two restrictions.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%
@@ -127,7 +127,7 @@ Our interest in this cellular automaton comes from the pattern displayed in Figu
 		\caption{Four copies, period $50$.}
 		\label{fig:reflectorless_rotating_oscillator4}
 	\end{subfigure}
-	\caption{A \textbf{reflectorless rotating oscillator} in the isotropic cellular automaton \texttt{B3-j6i/S23-c4i}. Either one, two, or four copies of the oscillator can be placed along the same path, producing oscillators with periods 200, 100, and 50. Found by ConwayLife.com forums user ``Hdjensofjfnen'' in January 2020.}\label{fig:reflectorless_rotating_oscillator}
+	\caption{A \textbf{reflectorless rotating oscillator} in the isotropic cellular automaton \texttt{B3-j6i/S23-c4i}. Either one, two, or four copies of the oscillator can be placed along the same path, producing oscillators with periods 200, 100, and 50. Found by Justin Tang in January 2020.}\label{fig:reflectorless_rotating_oscillator}
 \end{figure}
 
 Another exotic type of pattern that appears in isotropic cellular automata, but for which no elementary example is known in their Life-like brethren, is a \textbf{spaceship made of spaceships}\index{spaceship made of spaceships} (or \textbf{SMOS}\index{SMOS|see {spaceship made of spaceships}} for short): a spaceship that works by colliding two or more other spaceships with each other.\footnote{The Demonoids\index{Demonoid} that we constructed in the previous chapter are \emph{mostly} made up of gliders. However, they are not spaceships made of spaceships since there is no phase in which they consist \emph{entirely} of gliders.} One of the simplest such patterns occurs in the (admittedly very \emph{not} simple) cellular automaton
@@ -220,7 +220,7 @@ There are $2^{512}$ different 2D not necessarily isotropic cellular automata, an
 While the 0E0P metacell can emulate any $2$-state Moore-neighborhood cellular automaton in which a dead cell with all dead neighbors stays dead, it does not do so directly. Indeed, building a 0E0P metacell that directly emulates Life would be highly nontrivial for (at least) two reasons:\smallskip
 
 \begin{itemize}
-	\item \textbf{Quantity of neighbors}: each metacell would need to be able to construct a copy of itself in up to eight different locations. If both the north and east neighbours are present, for example, it may be difficult to maneuver a construction arm to build the northeast neighbour.\smallskip
+	\item \textbf{Quantity of neighbors}: each metacell would need to be able to construct a copy of itself in up to eight different locations. If both the north and east neighbors are present, for example, it may be difficult to maneuver a construction arm to build the northeast neighbor.\smallskip
 	
 	\item \textbf{Survival}: a cell can live for multiple generations, so its logic circuitry would need to be reusable. Reusable circuitry is considerably more expensive than single-use circuitry: compare, for instance, the size of a boat and a Snark---the smallest known one-time turner\footnote{We originally showed that a boat is a one-time turner in Exercise~\ref{exer:boat_one_time_turner}(a).} and reusable stable reflector, respectively.\smallskip
 \end{itemize}
@@ -230,7 +230,7 @@ To get around these two problems, the 0E0P metacell instead emulates an $8$-stat
 \begin{figure}[!htb]
 	\centering
 	\vcenteredhbox{\patternimg{0.345}{0e0p_checkerboard_0}} \vcenteredhbox{\genarrow{1}} \vcenteredhbox{\patternimg{0.345}{0e0p_checkerboard_1}} \vcenteredhbox{\genarrow{1}} \vcenteredhbox{\patternimg{0.345}{0e0p_checkerboard_2}}
-	\caption{An $8$-state cellular automaton using the von Neumann neighborhood that is of the type that the 0E0P metacell can emulate. The ``dead'' state is displayed in a white and light grey checkerboard pattern. The other $7$ states are displayed in black and various other colors, which alternate being on the white and light grey portions of the checkerboard pattern from one generation to the next.}\label{fig:0e0p_checkerboard}
+	\caption{An $8$-state cellular automaton using the von Neumann neighborhood that is of the type that the 0E0P metacell can emulate. The ``dead'' state is displayed in a white and light gray checkerboard pattern. The other $7$ states are displayed in black and various other colors, which alternate being on the white and light gray portions of the checkerboard pattern from one generation to the next.}\label{fig:0e0p_checkerboard}
 \end{figure}
 
 Despite the seemingly limited nature of these cellular automata, the fact that they have $8$ states makes them general enough to emulate arbitrary $2$-state Moore-neighborhood cellular automata at half speed. To see how this works, suppose we are given a particular $2$-state CA that we want to emulate. If we represent the ``dead'' and ``alive'' cells of that CA by the numbers $0$ and $7$, respectively,\footnote{Yes, $7$ seems like a weird choice. It will make more sense shortly.} then we can encode the CA by a function
@@ -335,7 +335,7 @@ The reason for choosing these seemingly random transition rules is that they lea
 \end{align}
 from $\{0,7\}^9$ to $\{0,1,2,3,4,5,6\}^4$ being injective (i.e., each output of the function corresponds to a \emph{unique} input).\footnote{However, the choices we made in Equation~\eqref{eq:0e0p_N_from_even} (or equivalently, Figure~\ref{fig:0e0p_rule_em}) are not the only ones that lead to this function being injective. This collection of outputs, and many others, can be found by computer search---see Exercise~\ref{exer:0e0p_even_gen_transition_rule}.} That is, given any $2 \times 2$ arrangement of states $0$, $1$, $\ldots$, $6$, we can figure out which $3 \times 3$ arrangement of $0$ and $7$ states (if any) gave rise to it. We can thus define $N$ on inputs from $\{0,1,2,3,4,5,6\}^4$ so that Equation~\eqref{eq:0e0p_N_from_M} holds (i.e., the cellular automaton defined by $N$ emulates the cellular automaton defined by $M$ at half speed).
 
-The resulting function $N$ is typically quite messy to write out in full detail (as it would just be an explicit list of how the $2^9 = 512$ possible arrangements of $2 \times 2$ grids of states $0$, $1$, $\ldots$, $6$ should evolve), even if the rule $M$ describes a relatively simple cellular automaton like Life. However, it can be constructed straightforwardly by a computer script,\footnote{One such script is available at \httpsurl{conwaylife.com/forums/viewtopic.php?p=38032}.} and the emulation of a glider in this way is illustrated in Figure~\ref{fig:0e0p_rule_em_glider}.
+The resulting function $N$ is typically quite messy to write out in full detail (as it would just be an explicit list of how the $2^9 = 512$ possible arrangements of $2 \times 2$ grids of states $0$, $1$, $\ldots$, $6$ should evolve), even if the rule $M$ describes a relatively simple cellular automaton like Life. However, it can be constructed straightforwardly by a computer script,\footnote{One such script is available at \httpsurl{conwaylife.com/forums/viewtopic.php?p=36112\#p36112}.} and the emulation of a glider in this way is illustrated in Figure~\ref{fig:0e0p_rule_em_glider}.
 
 \begin{figure}[!htb]
 	\centering
@@ -358,12 +358,12 @@ In order to implement this behavior, the 0E0P metacell is made up of three compo
 \begin{itemize}
 	\item The outermost part is the \textbf{shell},\index{shell} which directs information about the states of neighboring metacells. It has exact 90-degree rotational symmetry, consisting of four spiral arms which propagate gliders inwards. Only one of these arms is actually used; the other four exist only to enforce the rotational symmetry.\smallskip
 	
-	\item Inside the shell is the \textbf{kernel},\index{kernel} which does not have any symmetry constraints. The south corner of the kernel contains a clock gun for regulating the metacell's lifecycle and logic circuitry for computing the state of the metacell based on the states of its four neighboring cells. The kernel also contains an output path, shown in magenta in Figure~\ref{fig:0e0p_schematic}, which can connect to one of the four construction arms (dashed) or to the input shell of one of the four neighbours.\smallskip
+	\item Inside the shell is the \textbf{kernel},\index{kernel} which does not have any symmetry constraints. The south corner of the kernel contains a clock gun for regulating the metacell's lifecycle and logic circuitry for computing the state of the metacell based on the states of its four neighboring cells. The kernel also contains an output path, shown in magenta in Figure~\ref{fig:0e0p_schematic}, which can connect to one of the four construction arms (dashed) or to the input shell of one of the four neighbors.\smallskip
 	
 	\item At its center is the largest region of the metacell: its \textbf{nucleus},\index{nucleus} which is a huge glider loop with a period of exactly $2^{29}$. It is populated by over three million gliders, consisting of a complete single-channel glider synthesis of the 0E0P metacell, as well as a state lookup table that encodes the rule that the metacell is emulating.\smallskip
 \end{itemize}
 
-We describe how these three components of the metacell function throughout its lifecycle in more detail in the next three sections, and we then talk about how they are constructed by parent metacells in Section~\ref{sec:0e0p_construction}. Due to the complexity and size of the 0E0P metacell, it is extremely important that the reader does not just read through the next few sections, but also uses Life simulation software to explore the metacell's different components as we describe them.\footnote{Unfortunately, no Life simulation software is currently fast enough to run the entire 0E0P metacell ``quickly''. However, bits and pieces of it can be evolved to see how they behave, and numerous snapshots that show the metacell's state at different timestamps are provided in Section~\ref{sec:0e0p_timeline} and at \httpsurl{conwaylife.com/book/patterns.php?p=0e0p}.}
+We describe how these three components of the metacell function throughout its lifecycle in more detail in the next three sections, and we then talk about how they are constructed by parent metacells in Section~\ref{sec:0e0p_construction}. Due to the complexity and size of the 0E0P metacell, it is extremely important that the reader does not just read through the next few sections, but also uses Life simulation software to explore the metacell's different components as we describe them.\footnote{Unfortunately, no Life simulation software is currently fast enough to run the entire 0E0P metacell ``quickly''. However, bits and pieces of it can be evolved to see how they behave, and numerous snapshots that show the metacell's state at different timestamps are provided in Section~\ref{sec:0e0p_timeline} and at \httpsurl{conwaylife.com/book/0e0p}.}
 
 \begin{figure}[!htb]
 	\centering
@@ -381,7 +381,7 @@ We describe how these three components of the metacell function throughout its l
 \section{The Shell and Lane-Switching Circuitry}\label{sec:0e0p_structure_shell}\index{shell}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The rotationally symmetric shell that makes up the outermost edges of the 0E0P metacell is the simplest of its three components. At each of the locations marked \texttt{SW}, \texttt{NW}, \texttt{NE}, and \texttt{SE} in Figure~\ref{fig:0e0p_itself}, there are four recipe input lanes (in green and grey in Figure~\ref{fig:0e0p_schematic}). However, only one of those four lanes is ever actually used (in green)---the one that connects to the recipe output lane coming in from the kernel of the neighboring metacell (in solid magenta), if it exists.\footnote{This design is similar to that of a circuit on a motherboard---you can think of each side of the 0E0P metacell as having 8 ``pins'' (4 inputs pins and 4 output pins) that connect to the 8 pins of neighboring metacells.} The remaining input lanes (in grey) are unused, and only exist to enforce the shell's fourfold rotational symmetry.
+The rotationally symmetric shell that makes up the outermost edges of the 0E0P metacell is the simplest of its three components. At each of the locations marked \texttt{SW}, \texttt{NW}, \texttt{NE}, and \texttt{SE} in Figure~\ref{fig:0e0p_itself}, there are four recipe input lanes (in green and gray in Figure~\ref{fig:0e0p_schematic}). However, only one of those four lanes is ever actually used (in green)---the one that connects to the recipe output lane coming in from the kernel of the neighboring metacell (in solid magenta), if it exists.\footnote{This design is similar to that of a circuit on a motherboard---you can think of each side of the 0E0P metacell as having 8 ``pins'' (4 inputs pins and 4 output pins) that connect to the 8 pins of neighboring metacells.} The remaining input lanes (in gray) are unused, and only exist to enforce the shell's fourfold rotational symmetry.
 
 After the metacell has been constructed, these input lanes read in a copy of the 0E0P's single-channel construction recipe and state lookup table from its neighbors. That (extremely long) sequence of gliders revolves clockwise all the way around the spiral arm of the shell, until it is finally injected into the nucleus (at the location called \texttt{INS} in Figure~\ref{fig:0e0p_itself}) at the 0E0P's center.
 
@@ -518,7 +518,7 @@ In order to avoid the aforementioned factor-of-eight width increase, the 0E0P me
 	\embedlink{0e0p_subroutine}{\includegraphics[width=\textwidth]{0e0p/0e0p_subroutine.pdf}}	\caption{An 0E0P metacell that is currently using its pair of subroutine loops to construct the walls of its nucleus. Eight reflectors are constructed simultaneously, since the two loops run in parallel, and each loop uses glider duplicators to send four copies of its reflector-construction recipe southwest at a time.}\label{fig:0e0p_subroutine}
 \end{figure}
 
-This technique reduce the problem of constructing an immense ($2^{29}$-generation) glider loop to the problem of constructing the two smaller ($2^{21}$-generation) subroutine loops. Fortunately, the period~$2^{21}$ loops are small enough that they can be built without any special tricks, along with the rest of the metacell's kernel. In order to make them each copy the subroutine recipe the correct number of times, each subroutine loop is each equipped with its own clock gun that triggers its self-destruction $2^{29}$ generations after it is built. Since the subroutine loop has period $2^{21}$, it runs for exactly $2^{29}/2^{21} = 2^8 = 256$ iterations. Each subroutine loop furthermore feeds into a fourfold fanout (see Figure~\ref{fig:0e0p_subroutine}), so that it constructs a total of $256 \times 4 = 1{\thousep}024$ reflectors, as desired.
+This technique reduces the problem of constructing an immense ($2^{29}$-generation) glider loop to the problem of constructing the two smaller ($2^{21}$-generation) subroutine loops. Fortunately, the period~$2^{21}$ loops are small enough that they can be built without any special tricks, along with the rest of the metacell's kernel. In order to make them each copy the subroutine recipe the correct number of times, each subroutine loop is each equipped with its own clock gun that triggers its self-destruction $2^{29}$ generations after it is built. Since the subroutine loop has period $2^{21}$, it runs for exactly $2^{29}/2^{21} = 2^8 = 256$ iterations. Each subroutine loop furthermore feeds into a fourfold fanout (see Figure~\ref{fig:0e0p_subroutine}), so that it constructs a total of $256 \times 4 = 1{\thousep}024$ reflectors, as desired.
 
 The subroutine loops building the nucleus walls is the final step in the 0E0P metacell's construction process. Afterwards, its nucleus is filled with a copy of its own construction recipe, it goes through its various stages of communicating with and constructing neighboring metacells, and then it finally self-destructs.
 
@@ -905,7 +905,7 @@ Meanwhile, the parent metacell has served its purpose, so it is free to die. The
 \begin{figure}[!htb]
 	\centering
 	\embedlink{0e0p_timeline_8054294330_small}{\includegraphics[width=1\textwidth]{0e0p/0e0p_timeline_8054294330.pdf}}
-	\caption{The southwest child's $2$ state gliders erasing one-time circuitry that would otherwise cause the metacell to die early (highlighted in \bgbox{magentaback}{magenta}), and storing their state in the $8$-block sequence at the west edge of the south corner. The first of those $2$ state gliders was duplicated, so $3$ gliders (circled in \bgbox{redback}{red}) will hit the blocks, leaving $8-3 = 5$ blocks behind, corresponding to a the child's state $7 - 5 = 2$.}
+	\caption{The southwest child's $2$ state gliders erasing one-time circuitry that would otherwise cause the metacell to die early (highlighted in \bgbox{magentaback}{magenta}), and storing their state in the $8$-block sequence at the west edge of the south corner. The first of those $2$ state gliders was duplicated, so $3$ gliders (circled in \bgbox{redback}{red}) will hit the blocks, leaving $8-3 = 5$ blocks behind, corresponding to the child's state $7 - 5 = 2$.}
 	\label{fig:0e0p_timeline_8054294330}
 \end{figure}
 
@@ -1140,7 +1140,7 @@ Finally, Adam P.~Goucher spent 2014 through 2018 designing and constructing the 
 
 
 	\begin{problem}\label{exer:0e0p_one_cell_smos}\index{spaceship made of spaceships} \probdiff{3}
-		Create a von-Neumann-neighbourhood cellular automaton on a 2D square grid with at most $8$ states, where every cell dies in every generation (so it is of the type described in Section~\ref{sec:0e0p_rule_emulation} that can be emulated by the 0E0P metacell), in which two single-cell spaceships can collide so as to create a $2$-cell SMOS.
+		Create a von-Neumann-neighborhood cellular automaton on a 2D square grid with at most $8$ states, where every cell dies in every generation (so it is of the type described in Section~\ref{sec:0e0p_rule_emulation} that can be emulated by the 0E0P metacell), in which two single-cell spaceships can collide so as to create a $2$-cell SMOS.
 		
 		\noindent [Hint: Make a cell in one state move south, a cell in another state move east, and something else happen when they collide.]
 	\end{problem}
@@ -1306,7 +1306,7 @@ Finally, Adam P.~Goucher spent 2014 through 2018 designing and constructing the 
 	
 	
 	\begin{problem}\label{exer:explain_otca_metapixel} \probdiff{3}
-		Describe how the OTCA metapixel works. In particular, explain the mechanisms that it uses to sends its state (``alive'' or ``dead'') to its neighbors, and explain how those neighbors use the incoming states and the lookup table of Figure~\ref{fig:otca_metapixel} to compute their states.
+		Describe how the OTCA metapixel works. In particular, explain the mechanisms that it uses to send its state (``alive'' or ``dead'') to its neighbors, and explain how those neighbors use the incoming states and the lookup table of Figure~\ref{fig:otca_metapixel} to compute their states.
 	\end{problem}
 
 
