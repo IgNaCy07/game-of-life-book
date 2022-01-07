@@ -509,12 +509,208 @@
 		$ch_name = 'Glider Synthesis';
 
 		$fig_nums = array(
+			'Figure 5.1' => 'lwss_3_gliders.txt',
+			'Figure 5.2' => 'lwss_gun.txt',
+			'Figure 5.3' => 'invalid_synthesis.txt',
+			'Table 5.1' => '2_glider_syntheses.txt',
+			'Table 5.2(1)' => 'tee.txt',
+			'Table 5.2(2)' => '3_glider_lwss.txt',
+			'Table 5.2(3)' => '3_glider_mwss.txt',
+			'Table 5.2(4)' => '3_glider_hwss.txt',
+			'Table 5.2(5)' => '3_glider_pentadecathlon.txt',
+			'Table 5.2(6)' => '3_glider_pulsar.txt',
+			'Table 5.2(7)' => '3_glider_queen_bee.txt',
+			'Table 5.2(8)' => '3_glider_r_pentomino.txt',
+			'Table 5.2(9)' => '3_glider_switch_engine.txt',
+			'Table 5.2(10)' => '3_glider_switch_engine_glider.txt',
+			'Figure 5.4' => 'gosper_glider_synth.txt',
+			'Table 5.3(1)' => '4_glider_clock.txt',
+			'Table 5.3(2)' => 'twin_bees_synth.txt',
+			'Table 5.3(3)' => 'hwss_4_glider_synth.txt',
+			'Table 5.3(4)' => 'eater_2_6_gliders.txt',
+			'Figure 5.5' => 'fumarole_sequential.txt',
+			'Table 5.4(1)' => 'tub_sequential.txt',
+			'Table 5.4(2)' => 'honey_farm_incremental.txt',
+			'Table 5.4(3)' => 'queen_bee_sequential.txt',
+			'Table 5.4(4)' => 'hat_sequential.txt',
+			'Table 5.4(5)' => 'ship_sequential.txt',
+			'Table 5.4(6)' => 'tub_with_tail_sequential.txt',
+			'Table 5.4(7)' => 'snake_sequential.txt',
+			'Table 5.4(8)' => 't_tetromino_incremental.txt',
+			'Table 5.4(9)' => 'pentadecathlon_sequential.txt',
+			'Table 5.4(10)' => 'lwss_sequential.txt',
+			'Table 5.4(11)' => 'mwss_sequential.txt',
+			'Table 5.4(12)' => 'hwss_sequential.txt',
+			'Figure 5.6' => 'gosper_sequential.txt',
+			'Figure 5.7' => 'ecologist_synth.txt',
+			'Figure 5.8' => 'ecologist_synth_b.txt',
+			'Figure 5.9' => 'space_rake_synth.txt',
+			'Figure 5.10' => 'schick_engine_synth.txt',
+			'Figure 5.11' => 'coe_ship_incremental.txt',
+			'Figure 5.12' => '3_engine_cordership_synthesis.txt',
+			'Figure 5.13' => 'richs_p16_soup.txt',
+			'Figure 5.15' => 'richs_p16_predecessor.txt',
+			'Figure 5.16' => 'richs_p16_synthesis.txt',
+			'Figure 5.17' => 'breeder_front.txt',
+			'Figure 5.18' => 'breeder_done.txt',
+			'Figure 5.20' => 'slow_salvo_splitter.txt',
+			'Figure 5.21(a)' => 'block_move_1_glider.txt',
+			'Figure 5.21(b)' => 'block_move_6_gliders.txt',
+			'Figure 5.22(a)' => 'block_push_2_1.txt',
+			'Figure 5.22(b)' => 'block_move_1_neg1.txt',
+			'Figure 5.22(c)' => 'block_move_11_0.txt',
+			'Figure 5.22(d)' => 'block_push_11_0.txt',
+			'Figure 5.23' => 'one_time_turner.txt',
+			'Figure 5.24' => 'create_one_time_turner.txt',
+			'Figure 5.25' => 'unidirection_clock_synthesis.txt',
+			'Figure 5.26' => 'one_time_splitter.txt',
+			'Table 5.5' => '180_degree_one_time_turners.txt',
+			'Figure 5.27' => 'clock_slow_salvo.txt',
+			'Figure 5.28' => 'clock_inserter.txt',
+			'Figure 5.29' => 'clock_inserter_effective.txt',
+			'Figure 5.30(a)' => '14_cell_synth.txt',
+			'Figure 5.30(b)' => '15_cell_synth.txt',
+			'Figure 5.30(c)' => '16_cell_synth.txt',
+			'Figure 5.30(d)' => '17_cell_synth.txt',
+			'Figure 5.30(e)' => '18_cell_synth.txt',
+			'Figure 5.30(f)' => '19_cell_synth.txt',
+			'Figure 5.31' => '17_cell_synthesis.txt',
+			'Figure 5.32' => '17_cell_synthesis_small.txt',
+			'Exercise 5.1(a)' => 'exercise_glider_cleanup_1.txt',
+			'Exercise 5.1(b)' => 'tumbler_synthesis.txt',
+			'Exercise 5.1(c)' => 'snacker_synthesis.txt',
+			'Exercise 5.8(b)' => 'glider_pusher.txt',
+			'Exercise 5.22' => 'exercise_rich_p16_16.txt',
+			'Exercise 5.29' => 'boatstretcher_synth.txt',
+			'Exercise 5.30' => 'boat_append_barberpole.txt',
+			'Exercise 5.32(b)' => 'two_time_turner.txt',
+			'Exercise 5.35(a)' => 'clock_inserter_use_b.txt',
+			'Exercise 5.35(b)' => 'clock_inserter_use_d.txt',
+			'Exercise 5.35(c)' => 'clock_inserter_use_c.txt',
+			'Exercise 5.40' => 'blockic_splitter.txt',
+			'Solution 5.2(a)' => 'solution_block_destroy.txt',
+			'Solution 5.2(b)' => 'solution_beehive_destroy.txt',
+			'Solution 5.2(c)' => 'solution_blinker_destroy.txt',
+			'Solution 5.2(d)' => 'solution_ship_destroy.txt',
+			'Solution 5.2(e)' => 'solution_lwss_destroy.txt',
+			'Solution 5.4' => 'solution_block_glider.txt',
+			'Solution 5.5' => 'solution_twit_eater.txt',
+			'Solution 5.13(a)' => 'solution_switch_engine_two_directions.txt',
+			'Solution 5.13(b)' => 'solution_clock_two_directions.txt',
+			'Solution 5.13(c)' => 'solution_cordership_two_directions.txt',
+			'Solution 5.14(a)' => 'solution_2_engine_cordership_synthesis.txt',
+			'Solution 5.14(b)' => 'solution_2_engine_cordership_synthesis_2dir.txt',
+			'Solution 5.15(a)' => 'solution_switch_engine_opposite_directions.txt',
+			'Solution 5.15(b)' => 'solution_clock_opposite_directions.txt',
+			'Solution 5.15(c)' => 'solution_twin_bees_opposite_directions.txt',
+			'Solution 5.17(a)' => 'solution_space_rake_synth.txt',
+			'Solution 5.17(b)' => 'solution_p60_space_rake_synth.txt',
+			'Solution 5.19' => 'solution_back_space_rake_synth.txt',
+			'Solution 5.29(a)' => 'crab_synth.txt',
+			'Solution 5.29(b)' => 'solution_large_still_life_synth.txt',
+			'Solution 5.31(a)' => 'solution_boat_one_time.txt',
+			'Solution 5.31(b)' => 'solution_eater1_one_time.txt',
+			'Solution 5.31(c)' => 'solution_longboat_one_time.txt',
+			'Solution 5.31(d)' => 'solution_one_time_blinker.txt',
+			'Solution 5.32(a)' => 'solution_one_time_square.txt',
+			'Solution 5.32(c)' => 'solution_two_time_square.txt',
+			'Solution 5.33(a)' => 'solution_one_time_blinker_track.txt',
+			'Solution 5.33(b)' => 'solution_one_time_boat_track.txt',
+			'Solution 5.34' => 'solution_clock_inserter_block.txt',
+			'Solution 5.35(a)' => 'solution_clock_inserter_use_b.txt',
+			'Solution 5.35(b)' => 'solution_clock_inserter_use_d.txt',
+			'Solution 5.35(c)' => 'solution_clock_inserter_use_c.txt',
+			'Solution 5.36(a)' => 'solution_tee_15_ticks.txt',
+			'Solution 5.36(b)' => 'solution_eater1_15_ticks.txt',
+			'Solution 5.36(c)' => 'solution_clock_14_ticks.txt',
+			'Solution 5.44(a)' => 'solution_2_engine_corder_seed_a.txt',
+			'Solution 5.44(b)' => 'solution_2_engine_corder_seed_b.txt',
+			'Solution 5.44(c)' => 'solution_2_engine_corder_seed_c.txt',
+			'Solution 5.44(d)' => 'solution_2_engine_corder_seed_d.txt',
 		);
 	} else if($_GET['p'] == 'periodic_circuitry'){
 		$ch_num = 6;
 		$ch_name = 'Periodic Circuitry';
 
 		$fig_nums = array(
+			'Figure 6.2' => 'gosper_glider_gun.txt',
+			'Figure 6.3' => 'buckaroo_reflect.txt',
+			'Figure 6.4(a)' => 'p30_relay.txt',
+			'Figure 6.4(b)' => 'p30_180_reflect.txt',
+			'Figure 6.4(c)' => 'p30_90_reflect_penta.txt',
+			'Figure 6.5' => 'inverter_non_inline.txt',
+			'Figure 6.6(a)' => 'inline_inverter.txt',
+			'Figure 6.6(b)' => 'inline_inverter_p120.txt',
+			'Figure 6.7' => 'inline_inverter_bounce.txt',
+			'Figure 6.8(a)' => 'inline_inverter_p120_gun.txt',
+			'Figure 6.8(b)' => 'inverter_p120_gun.txt',
+			'Figure 6.9' => 'stream_inverter.txt',
+			'Figure 6.10' => 'glider_duplicator.txt',
+			'Figure 6.11' => 'glider_pusher.txt',
+			'Figure 6.12' => 'glider_to_lwss.txt',
+			'Figure 6.13' => 'lwss_to_glider.txt',
+			'Figure 6.14' => 'toggle.txt',
+			'Figure 6.15' => 'prime_lwss_stream.txt',
+			'Figure 6.16' => 'glider_lwss_destroy.txt',
+			'Figure 6.18' => 'period_not_2_3_lwss_gun.txt',
+			'Figure 6.20' => 'breeder_compact.txt',
+			'Figure 6.21' => 'breeder_ggg_eater_1_stabilize.txt',
+			'Figure 6.22' => 'primer.txt',
+			'Figure 6.23' => 'twin_bees_reflect.txt',
+			'Figure 6.24(a)' => 'twin_bees_p23_gun.txt',
+			'Figure 6.24(b)' => 'twin_bees_p46_lwss_gun.txt',
+			'Figure 6.24(c)' => 'twin_bees_lwss_to_mwss.txt',
+			'Figure 6.25' => 'twin_bees_duplicate_reflector.txt',
+			'Figure 6.26' => 'ticker_tape_gun.txt',
+			'Figure 6.27' => 'ticker_tape_hi_gun.txt',
+			'Figure 6.28' => 'p46_memory_cell.txt',
+			'Figure 6.29(a)' => 'tanners_p46_edge.txt',
+			'Figure 6.29(b)' => 'tanners_p46_inline_inverter.txt',
+			'Figure 6.29(c)' => 'tanners_p46_mwss_gun.txt',
+			'Figure 6.30' => 'p46_hwss_gun.txt',
+			'Figure 6.31' => 'p46_natural_heisenburp.txt',
+			'Figure 6.32' => 'mwss_out_of_the_blue.txt',
+			'Figure 6.33(a)' => 'heisenburp_reaction_p35.txt',
+			'Figure 6.33(b)' => 'heisenburp_reaction_p35.txt',
+			'Figure 6.34' => 'p46_heisenburp_constructed.txt',
+			'Figure 6.35(a)' => 'bumper.txt',
+			'Figure 6.35(b)' => 'p3_bumper_b.txt',
+			'Figure 6.35(c)' => 'p3_bumper_a.txt',
+			'Figure 6.35(d)' => 'p4_bumper.txt',
+			'Figure 6.35(e)' => 'p6_bumper.txt',
+			'Figure 6.35(f)' => 'p7_bumper.txt',
+			'Figure 6.35(g)' => 'p8_bumper.txt',
+			'Figure 6.35(h)' => 'p9_bumper.txt',
+			'Figure 6.35(i)' => 'p11_bumper.txt',
+			'Figure 6.36(b)' => 'p6_bouncer.txt',
+			'Figure 6.36(c)' => 'p7_bouncer.txt',
+			'Figure 6.36(d)' => 'p8_bouncer.txt',
+			'Figure 6.36(e)' => 'p15_bouncer.txt',
+			'Figure 6.36(f)' => 'p5_bouncer.txt',
+			'Figure 6.37(a)' => 'inverter_as_regulator_0.txt',
+			'Figure 6.37(b)' => 'inverter_as_regulator_1.txt',
+			'Figure 6.38' => 'boat_bit.txt',
+			'Figure 6.39' => 'boat_bit_into_glider.txt',
+			'Figure 6.40' => 'make_sync_glider.txt',
+			'Figure 6.41(b)' => 'universal_regulator_periodic.txt',
+			'Figure 6.42(a)' => 'prng_gun.txt',
+			'Figure 6.43' => 'life_computes_pi.txt',
+			'Exercise 6.5' => 'glider_to_hwss_to_glider.txt',
+			'Exercise 6.6' => 'any_wss_to_glider.txt',
+			'Exercise 6.9' => 'exercise_lwss_filter.txt',
+			'Exercise 6.19' => 'twin_bees_large_spark.txt',
+			'Exercise 6.25' => 'skewed_p29.txt',
+			'Exercise 6.30' => 'minimum_snark_loop.txt',
+			'Solution 6.24(a)' => 'p16_bumper.txt',
+			'Solution 6.24(b)' => 'p22_bumper.txt',
+			'Solution 6.24(c)' => 'p4_bumper_fountain.txt',
+			'Solution 6.24(d)' => 'p15_bumper.txt',
+			'Solution 6.24(e)' => 'p5_bumper.txt',
+			'Solution 6.25' => 'p29_pip_reflector.txt',
+			'Solution 6.30(a)' => 'solution_minimum_period_snark_loop_a.txt',
+			'Solution 6.30(b)' => 'solution_minimum_period_snark_loop_b.txt',
+			'Solution 6.30(c)' => 'solution_minimum_period_snark_loop_c.txt',
+			'Solution 6.30(e)' => 'solution_minimum_period_snark_loop_e.txt',
 		);
 	} else if($_GET['p'] == 'stationary_circuitry'){
 		$ch_num = 7;
@@ -565,8 +761,6 @@
 <html lang="en">
 <head>
 
-  <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
   <title>Conway's Game of Life: Mathematics and Construction</title>
   <meta name="description" content="A textbook for mathematical aspects of Conway's Game of Life and methods of pattern construction.">
@@ -575,29 +769,19 @@
   <script type="text/javascript" src="https://conwaylife.com/book/js/lv-plugin.js"></script>
   <script type="text/javascript" src="https://conwaylife.com/book/js/selectCode.js"></script>
 
-  <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- FONT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
 
-  <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="https://conwaylife.com/book/css/normalize.css">
   <link rel="stylesheet" href="https://conwaylife.com/book/css/skeleton.css">
   <link rel="stylesheet" href="https://conwaylife.com/book/css/custom.css">
 
-  <!-- Scripts
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
   <link rel="stylesheet" href="css/github-prettify-theme.css">
   <script src="https://conwaylife.com/book/js/site.js"></script>
 
-  <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <link rel="shortcut icon" type="image/png" href="https://conwaylife.com/book/favicon.png"/>
 
 <style>
@@ -633,8 +817,6 @@
         </div>
       </div>
 
-  <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
     <div class="navbar-spacer"></div>
     <nav class="navbar">
@@ -672,7 +854,5 @@
 
   </div>
 
-<!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
 </html>
