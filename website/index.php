@@ -1,11 +1,4 @@
-<?php
-	$book_size = filesize('conway_life_book.pdf');
-
-	$book_size_readable = round($book_size / 1048576, 2);
-
-	$zip_size = filesize('patterns/all.zip');
-	$zip_size_readable = round($zip_size / 1048576, 2);
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 
@@ -37,10 +30,7 @@
   <link rel="stylesheet" href="css/github-prettify-theme.css">
   <script src="js/site.js"></script>
 
-  <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<link rel="shortcut icon" type="image/png" href="/favicon.png"/>
-<link rel="shortcut icon" type="image/png" href="http://www.conwaylife.com/book/favicon.png"/>
+<link rel="shortcut icon" type="image/png" href="https://conwaylife.com/book/favicon.png" />
 
 <style>
 .anchor{
@@ -56,7 +46,7 @@
 
     <div class="container">
       <div class="row" style="padding-top:4rem;padding-bottom:1rem;">
-        <div style="float:right;width:158px;margin-left:10px;max-width:30%;">
+        <div style="width:158px;" class="bookimgdiv">
           <img src="images/logo.png" style="width:158px;height:157px;" class="bookimg">
         </div>
         <div style="overflow: hidden;">
@@ -85,7 +75,7 @@
 
 
     <div class="docs-section" style="margin-bottom:0px;padding-bottom:0px;">
-      <h6 class="docs-header" style="color:red;">Book still in progress.<br /><font color="black">This is not the final version yet -- beta readers are in the process of reviewing and commenting. To join the beta readers' group, make comments on the <a href="https://conwaylife.com/forums/viewtopic.php?f=7&t=5418">dedicated forum thread</a>.</font></h6>
+      <h6 class="docs-header" style="color:red;">Print version coming soon!<br /><font color="black">The PDF version of the book is available below.</font></h6>
     </div>
 
 
@@ -102,7 +92,7 @@
       <h6 class="docs-header">Download the Book</h6>
       <p>Whether you are using it for self-study or a course, the textbook can be downloaded as a PDF file free of charge. We recommend that you view the PDF in a stand-alone PDF reader like <a href="https://get.adobe.com/reader/">Adobe Acrobat</a> (which is also free), <em>not</em> your in-browser PDF viewer, so that you can click on pattern images to view their <a href="http://www.conwaylife.com/wiki/RLE">RLE encodings</a> (which you can then copy and paste into Life software like <a href="http://golly.sourceforge.net/">Golly</a>).</p>
       <center>
-        <a class="button button-primary" href="conway_life_book.pdf" style="padding-left:15px;"><img src="images/pdf.png" style="vertical-align:middle;padding-bottom:3px;padding-right:15px;">Book in PDF Format (<?php echo $book_size_readable; ?> Mb, <?php echo date("M d Y", filemtime('conway_life_book.pdf')); ?>)</a>
+        <a class="button button-primary" href="conway_life_book.pdf" style="padding-left:15px;"><img src="images/pdf.png" style="vertical-align:middle;padding-bottom:3px;padding-right:15px;">Book in PDF Format (91.23 Mb)</a>
       </center>
     </div>
 
@@ -111,7 +101,7 @@
     <div class="docs-section">
       <h6 class="docs-header">Pattern Files</h6>
       <p>Pattern files for all patterns that are displayed as figures in the book are provided here. You can view and manipulate these patterns right in your web browser, or you can copy these code files into Game of Life software like <a href="http://golly.sourceforge.net/">Golly</a>.</p>
-      <center><b><a href="patterns/all.zip">All pattern files, except for Chapter 12, in a .zip archive file (<?php echo $zip_size_readable; ?> Mb)</a></b></center>
+      <center><b><a href="patterns/all.zip">All pattern files, except for Chapter 12, in a .zip archive file (8.91 Mb)</a></b></center>
       <ul style="margin-top:12px;">
         <li><a href="/book/early_life">Chapter 1: Early Life</a></li>
         <li><a href="/book/still_lifes">Chapter 2: Still Lifes</a></li>

@@ -4,7 +4,7 @@
 \else
 %% WATERMARKING COMMANDS.
 \usepackage{draftwatermark}
-\SetWatermarkText{Preprint z conwaylife.com/book (\today). \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad ${}$}
+\SetWatermarkText{Free PDF. \ See conwaylife.com/book for pattern files and print version. \qquad\qquad\qquad\qquad\qquad\qquad\qquad ${}$}
 \SetWatermarkColor[gray]{0.75}
 \SetWatermarkFontSize{0.5cm}
 \SetWatermarkAngle{90}
@@ -114,7 +114,7 @@
 \usepackage{float}
 \floatstyle{ruled}
 \newfloat{pseudocode}{!htb}{lop}
-\floatname{pseudocode}{Pseudokod}
+\floatname{pseudocode}{Pseudocode}
 \newfloat{apgsembly}{!htb}{lop}
 \floatname{apgsembly}{APGsembly}
 
@@ -150,7 +150,7 @@
 \definecolor{darkmagentaback}{RGB}{96,0,96}
 \newcommand{\cmark}{\checkmark} % checkmark
 \newcommand{\xmark}{\ding{55}} % matching X
-\newcommand{\thousep}{ \. } % separator (thin space) to use in numbers
+\newcommand{\thousep}{ \, } % separator (thin space) to use in numbers
 
 \newcommand{\chapterfolder}{cover/}
 
@@ -352,15 +352,15 @@
 \newcounter{dummy} 
 \numberwithin{dummy}{chapter}
 \theoremstyle{ocrenumbox}
-\newtheorem{theoremeT}[dummy]{Twierdzenie}
-\newtheorem{corollaryT}[dummy]{Wniosek}
-\newtheorem{propositionT}[dummy]{Założenie}
-\newtheorem{exerciseT}{Ćwiczenie}[chapter]
+\newtheorem{theoremeT}[dummy]{Theorem}
+\newtheorem{corollaryT}[dummy]{Corollary}
+\newtheorem{propositionT}[dummy]{Proposition}
+\newtheorem{exerciseT}{Exercise}[chapter]
 \theoremstyle{blacknumex}
-\newtheorem{exampleT}{Przykład}[chapter]
+\newtheorem{exampleT}{Example}[chapter]
 \theoremstyle{blacknumbox}
-\newtheorem{vocabulary}{Słowniczek}[chapter]
-\newtheorem{definitionT}{Definicja}[chapter]
+\newtheorem{vocabulary}{Vocabulary}[chapter]
+\newtheorem{definitionT}{Definition}[chapter]
 \theoremstyle{ocrenum}
 \newcommand{\rawtilde}{\raise.17ex\hbox{$\scriptstyle\mathtt{\sim}$}}
 
@@ -788,8 +788,8 @@ innerbottommargin=5pt]{cBox}
 \hypersetup{hidelinks,filebordercolor=red,menubordercolor=red,linkbordercolor=red,backref=true,pagebackref=true,hyperindex=true,colorlinks=true,breaklinks=true,urlcolor=ocre,bookmarks=true,citecolor=redback2,linkcolor=linkcol,bookmarksopen=false}
 \fi
 \hypersetup{
-	pdftitle = {Gra w Życie Conwaya - Matematyka i Konstrukcja},
-	pdfauthor = {Nathaniel Johnston i Dave Greene}
+	pdftitle = {Conway's Game of Life - Mathematics and Construction},
+	pdfauthor = {Nathaniel Johnston and Dave Greene}
 }
 \usepackage{bookmark}
 \bookmarksetup{
